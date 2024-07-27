@@ -8,8 +8,35 @@
 body{
     background-image: url("img/pokemon-bg.jpg");
     background-size: cover;
+    
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 100px;
+    background-color: rgba(218, 216, 216, 0.651);
+    margin: 0 auto;
+    margin-bottom: 24px;
+    border-radius: 15px;
+}
+
+.header img {
+    height: 80px;
+    margin: 8px;
+}
+
+.search-bar {
+height: 45%;
+width: 35%;
+border-radius: 15px;
+margin-right: 24px;
+padding: 16px;
+font-size: 16px;
+}
+    
 .logo {
     height: 50px;
 }
@@ -94,56 +121,56 @@ body{
 /* Pokecard Ende */
 
 .normal {
-    background-color: #A8A77A;
+    background-color: #a19f29;
 } 
 .fire {
     background-color: #EE8130;
 } 
 .water {
-    background-color: #6390F0;
+    background-color: #2a57b8;
 } 
 .electric {
-    background-color: #F7D02C;
+    background-color: #bd9a12;
 } 
 .grass {
-    background-color: #7AC74C;
+    background-color: #54aa22;
 } 
 .ice {
-    background-color: #96D9D6;
+    background-color: #60d1cb;
 } 
 .fighting {
-    background-color: #C22E28;
+    background-color: #a51914;
 } 
 .poison {
-    background-color: #A33EA1;
+    background-color: #a02a9e;
 } 
 .ground {
-    background-color: #E2BF65;
+    background-color: #e0b64b;
 } 
 .flying {
-    background-color: #A98FF3;
+    background-color: #633ad3;
 } 
 .psychic {
-    background-color: #F95587;
+    background-color: #df1b55;
 } 
 .bug {
-    background-color: #A6B91A;
+    background-color: #677408;
 } 
 .rock {
-    background-color: #B6A136;
+    background-color: #aa921a;
 } 
 .ghost {
-    background-color: #735797;
+    background-color: #653a9c;
 } 
 .dragon {
-    background-color: #6F35FC;
+    background-color: #5b1ef7;
 } 
 .dark {
-    background-color: #705746;
+    background-color: #7c5337;
 } 
 .steel {
-    background-color: #B7B7CE;
+    background-color: #7e7ec4;
 } 
 .fairy {
-    background-color: #D685AD;
+    background-color: #b35986;
 } 

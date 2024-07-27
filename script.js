@@ -2,7 +2,7 @@ let pokemonData = [];
 
 async function init() {
     await getDataPokemon();
-    renderPokemon();
+    renderPokemon(pokemonData);
 }
 
 // Daten werden von der Pokemon API geholt
@@ -19,15 +19,14 @@ async function getDataPokemon() {
     }
 }
 
-
-function renderPokemon() {
+function renderPokemon(data) {
     let content = document.getElementById('content');
     let button = document.getElementById('loadButton');
 
     let htmlContent = '';
 
-    for (let i = 0; i < pokemonData.length; i++) {
-        let pokemon = pokemonData[i];
+    for (let i = 0; i < data.length; i++) {
+        let pokemon = data[i];
         let id = pokemon.id;
         let pokemonName = upperCase(pokemon.name);
         let pokemonImg = pokemon.sprites.other["official-artwork"].front_default;
@@ -35,6 +34,7 @@ function renderPokemon() {
         let type1Class = types[0].type.name.toLowerCase();
         let type1 = upperCase(types[0].type.name);
         let { type2Class, type2Div } = getType2Info(types);
+        let text1=
 
         htmlContent += renderPokemonHtml(id, type1Class, pokemonName, type2Div, pokemonImg, type1, type2Class);
     }
@@ -75,8 +75,6 @@ async function loadMore() {
 
     let content = document.getElementById('content');
     content.innerHTML += newHtmlContent;
-
-    
 }
 
 function getType2Info(types) {
@@ -85,7 +83,6 @@ function getType2Info(types) {
     let type2Div = type2 ? upperCase(type2) : '';
     return { type2Class, type2Div };
 }
-
 
 function upperCase(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -112,5 +109,16 @@ function renderPokemonHtml(id, type1Class, pokemonName, type2Div, pokemonImg, ty
         </div>
     `;
 }
+// Suchfunktion für die Pokemon
+function searchPokemon() {
+    let searchInput = document.getElementById('search').value.toLowerCase();
+    if (searchInput.length >= 3) {
+        let filteredPokemon = pokemonData.filter(pokemon => pokemon.name.includes(searchInput));
+        renderPokemon(filteredPokemon);
+    } else {
+        renderPokemon(pokemonData);
+    }
+}
+
 
 
