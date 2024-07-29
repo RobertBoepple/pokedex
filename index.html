@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +10,20 @@
     <link rel="icon" href="/icon/favicon/favicon-32x32.png">
     <script src="script.js" defer></script>
 </head>
+
 <body onload="init()">
     <img src="/img/pokeball.png" alt="" class="logo">
     <div class="header">
-       <img src="img/Pokedex.png" alt="">
-       <input type="text" id="search" label="Search" class="search-bar" placeholder="Search Pokemon" onkeydown="searchPokemon()">
+        <img src="img/Pokedex.png" alt="">
+        <input type="text" id="search" class="search-bar" placeholder="Search Pokemon" onkeyup="searchPokemon()">
     </div>
     <div class="content" id="content"></div>
-  
-    <div id="loadButton" class="loadbutton">
 
+    <div id="loadButton" class="loadbutton"></div>
+    <div id="pokebox" class="overlay d-none">
+        <div class="pokebox-container"></div>
     </div>
 </body>
+
 </html>
+
